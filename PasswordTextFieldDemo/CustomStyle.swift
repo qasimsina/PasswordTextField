@@ -4,9 +4,7 @@ import PasswordTextField
 
 struct CustomStyle {
     static func apply() {
-       
-    
-       
+        
     }
 }
 
