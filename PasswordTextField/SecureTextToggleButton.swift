@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import QuartzCore
 
 
 /// The Segure text button toggle shown in the right side of the textfield
@@ -19,7 +18,7 @@ open class SecureTextToggleButton: UIButton {
     fileprivate let Height:CGFloat = 20.0
     
     /// Sets the value for the secure or note secure toggle and
-    dynamic open var isSecure:Bool = true{
+    @objc dynamic open var isSecure:Bool = true{
         
         didSet{
             
@@ -80,7 +79,6 @@ open class SecureTextToggleButton: UIButton {
         super.init(frame: frame)
         
         setup()
-        
     }
     
     public required init?(coder: NSCoder) {
@@ -88,7 +86,6 @@ open class SecureTextToggleButton: UIButton {
         super.init(coder: coder)
         
         setup()
-        
     }
 
     
@@ -150,19 +147,9 @@ open class SecureTextToggleButton: UIButton {
      */
     @objc open func buttonTouch()
     {
-//        //for zoom in
-//        UIView.animate(withDuration: 0.5, animations: {() -> Void in
-//                self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-//            }, completion: {(_ finished: Bool) -> Void in
-//        })
-//        // for zoom out
-//        UIView.animate(withDuration: 0.5, animations: {() -> Void in
-//                self.transform = CGAffineTransform(scaleX: 1, y: 1)
-//            }, completion: {(_ finished: Bool) -> Void in
-//        })
-        
         self.isSecure = !self.isSecure
     }
 }
+
 
 
